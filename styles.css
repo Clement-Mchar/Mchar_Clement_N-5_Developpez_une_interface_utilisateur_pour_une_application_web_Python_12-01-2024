@@ -1,3 +1,77 @@
-@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap");
+body {
+  font-family: "system-ui", sans-serif;
+  font-weight: 200;
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-movie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+}
+.categories .category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.categories .category .movies-list {
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  max-width: 95%;
+}
+.categories .category .movies-list .carousel {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  overflow: hidden;
+  margin-left: 3%;
+  margin-right: 3%;
+  padding: 0%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+  background-color: gray;
+  color: white;
+  align-items: center;
+}
+header h1 {
+  margin-left: 3%;
+  font-weight: lighter;
+  font-size: 50px;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 8%;
+}
+header nav ul {
+  display: flex;
+  padding: 0px;
+  justify-content: space-between;
+  list-style: none;
+  flex-direction: row;
+}
+header nav ul li {
+  padding-right: 20px;
+}
+header nav ul a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 34px;
+}
 
 /*# sourceMappingURL=styles.css.map */
