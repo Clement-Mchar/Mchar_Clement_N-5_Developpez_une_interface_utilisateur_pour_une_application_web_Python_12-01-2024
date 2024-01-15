@@ -1,4 +1,9 @@
-
+@mixin flex-container($direction: column, $align: center, $justify: space-between) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
 
 body{
     font-family: "system-ui", sans-serif;
@@ -8,9 +13,7 @@ body{
 }
 
 .featured-movie {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-container(column, center);
     margin-top: 2%;
     border: 3px solid black;
     max-height: 43em;
@@ -18,19 +21,14 @@ body{
     margin-bottom: 2%;
 }
 .categories {
-    display: flex;
-    flex-direction: column;
+    @include flex-container(column);
     .category {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex-container(column, center);
         margin-top: 2%;
         margin-bottom: 2%;
         .movies-list {
-            display: flex;
+            @include flex-container(column, center, space-between);
             white-space: nowrap;
-            align-items: center;
-            justify-content: space-between;
             button {
                 background-color: transparent;
                 border: none;
@@ -39,8 +37,7 @@ body{
                 padding: 0%;
             }
             .carousel {
-                display: flex;
-                flex-direction: row;
+                @include flex-container(row);
                 list-style: none;
                 padding: 0%;
                 margin: 0% 1% 0% 1%;
@@ -70,27 +67,22 @@ h3 {
     font-weight: 500;
 }
 header {
-    display: flex;
-    justify-content: space-between;
+    @include flex-container(column, center, space-between);
     flex-shrink: 0;
     background-color: gray;
     color: white;
-    align-items: center;
     h1 {
         margin-left: 3%;
         font-weight: lighter ;
         font-size: 50px;
     }
     nav {
-        display: flex;
-        justify-content: space-between;
+        @include flex-container(space-between);
         margin-right: 8%;
         ul {
-            display: flex;
+            @include flex-container(row, space-between);
             padding: 0px;
-            justify-content: space-between;
             list-style: none;
-            flex-direction: row;
             li{
                 padding-right: 20px;
             }
