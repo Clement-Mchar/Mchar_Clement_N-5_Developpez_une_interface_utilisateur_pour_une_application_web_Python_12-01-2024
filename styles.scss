@@ -12,6 +12,9 @@ body{
     flex-direction: column;
     align-items: center;
     margin-top: 2%;
+    border: 3px solid black;
+    max-height: 43em;
+    overflow: hidden;
     margin-bottom: 2%;
 }
 .categories {
@@ -27,20 +30,45 @@ body{
             display: flex;
             white-space: nowrap;
             align-items: center;
-            max-width: 95%;
+            justify-content: space-between;
+            button {
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                font-size: 2em;
+                padding: 0%;
+            }
             .carousel {
                 display: flex;
                 flex-direction: row;
                 list-style: none;
-                overflow: hidden;
-                margin-left: 3%;
-                margin-right: 3%;
                 padding: 0%;
+                margin: 0% 1% 0% 1%;
+                overflow: hidden;
+                li {
+                    padding: 0% 1% 0% 1%;
+                    margin: 0% 1% 0% 1%;
+                    min-width: 23%;
+                    max-height: 18em;
+                    overflow: hidden;
+                    box-sizing: border-box;
+                    border: 3px solid black;
+                    border-radius: 30px;
+                    img {
+                        width: 100%;
+                        overflow:hidden;
+                        margin: 0% 1% 0% 1%;
+                    }
+
+                }
             }
         }
     }
 }
-
+h3 {
+    font-size: 25px;
+    font-weight: 500;
+}
 header {
     display: flex;
     justify-content: space-between;
