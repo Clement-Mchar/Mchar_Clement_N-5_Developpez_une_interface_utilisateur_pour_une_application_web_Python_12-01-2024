@@ -6,19 +6,53 @@
 }
 
 body{
+    @include flex-container(column, normal);
     font-family: "system-ui", sans-serif;
     font-weight: 200;
-    display: flex;
-    flex-direction: column;
 }
 
 .featured-movie {
-    @include flex-container(column, center);
+    @include flex-container(row, center, space-evenly);
     margin-top: 2%;
     border: 3px solid black;
-    max-height: 43em;
     overflow: hidden;
     margin-bottom: 2%;
+    .sub-container{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        img{
+            object-fit: contain;
+        }
+    }
+    .featured-movie-layout{
+        @include flex-container(column, center, center );
+        flex: 1;
+        h2{
+            font-size: 40px;
+        }
+        button{
+            width: 7rem;
+            font: inherit;
+            font-size: 28px;
+            font-weight: 400;
+            color: white;
+            height: 3rem;
+            background-color: #ff2c00;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+        .summary{
+            text-align-last: center;
+            display: flex;
+            text-align: right;
+            flex-wrap: wrap;
+        }
+    }
+    .layout-helper{
+        flex: 1;
+    }
 }
 .categories {
     @include flex-container(column);
@@ -27,7 +61,7 @@ body{
         margin-top: 2%;
         margin-bottom: 2%;
         .movies-list {
-            @include flex-container(column, center, space-between);
+            @include flex-container(row, center, space-between);
             white-space: nowrap;
             button {
                 background-color: transparent;
@@ -67,7 +101,7 @@ h3 {
     font-weight: 500;
 }
 header {
-    @include flex-container(column, center, space-between);
+    @include flex-container(row, center, space-between);
     flex-shrink: 0;
     background-color: gray;
     color: white;
