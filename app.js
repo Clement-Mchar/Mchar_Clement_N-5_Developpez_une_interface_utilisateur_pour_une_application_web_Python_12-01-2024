@@ -34,17 +34,25 @@ function fetchFeaturedMoviePreview() {
 
 fetchFeaturedMoviePreview();
 
-const carouselList = document.querySelector('.carousel');
-const scrollLeftButton = document.querySelector('.scroll-left-button');
-const scrollRightButton = document.querySelector('.scroll-right-button');
+function setupCarousel(carouselSelector) {
+    const carousel = document.querySelector(carouselSelector);
+    const carouselList = carousel.querySelector('.carousel');
+    const scrollLeftButton = carousel.querySelector('.scroll-left-button');
+    const scrollRightButton = carousel.querySelector('.scroll-right-button');
 
-scrollLeftButton.addEventListener('click', () => {
-    const lastItem = carouselList.lastElementChild;
-    carouselList.insertBefore(lastItem, carouselList.firstElementChild);
-});
+    scrollLeftButton.addEventListener('click', () => {
+        const lastItem = carouselList.lastElementChild;
+        carouselList.insertBefore(lastItem, carouselList.firstElementChild);
+    });
 
-scrollRightButton.addEventListener('click', () => {
-    const firstItem = carouselList.firstElementChild;
-    carouselList.appendChild(firstItem);
-});
+    scrollRightButton.addEventListener('click', () => {
+        const firstItem = carouselList.firstElementChild;
+        carouselList.appendChild(firstItem);
+    });
+}
+
+setupCarousel('.category.best-rated');
+setupCarousel('.category.action');
+setupCarousel('.category.adventure');
+setupCarousel('.category.comedy');
 
