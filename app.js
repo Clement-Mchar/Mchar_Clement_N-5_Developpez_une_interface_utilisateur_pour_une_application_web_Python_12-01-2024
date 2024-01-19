@@ -41,13 +41,11 @@ function setupCarousel(carouselSelector) {
     const scrollRightButton = carousel.querySelector('.scroll-right-button');
 
     scrollLeftButton.addEventListener('click', () => {
-        const lastItem = carouselList.lastElementChild;
-        carouselList.insertBefore(lastItem, carouselList.firstElementChild);
+        carouselList.scrollLeft -= carouselList.clientWidth;
     });
-
+    
     scrollRightButton.addEventListener('click', () => {
-        const firstItem = carouselList.firstElementChild;
-        carouselList.appendChild(firstItem);
+        carouselList.scrollLeft += carouselList.clientWidth;
     });
 }
 

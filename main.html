@@ -11,18 +11,24 @@
 <body>
     <header>
         <h1>JustStreamIt</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Catégories</a></li>
-            </ul>
+        <nav class="navigation">
+            <a href="#">Accueil</a>
+            <div class="categories-wrapper">
+                <h3 href="#movies-categories" class="">Catégories</h3>
+                <div id="movies-categories">
+                    <a href="#best-rated">Les mieux notés</a>
+                    <a href="#action">Action</a>
+                    <a href="#adventure">Aventure</a>
+                    <a href="#comedy">Comédie</a>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
         <section class="featured-movie">
             <div class="featured-movie-layout">
                 <h2></h2>
-                <button>Play</button>
+                <a class="play-button" href="#modal">Play</a>
                 <p class="summary"></p>
             </div>
             <div class="sub-container">
@@ -32,32 +38,46 @@
         </section>
         <section class="categories">
             <div class="category best-rated">
-                <h3>Films les mieux notés</h3>
+                <h3 id="best-rated">Films les mieux notés</h3>
                 <div class="movies-list">
                     <button class="scroll-left-button">
                         <i class="fa-solid fa-chevron-left"></i>
                     </button>
                     <ul class="carousel">
-                        <li title="Film 1">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 1">
+                        <li class="item" title="Film 1">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 1">
+                            </a>
                         </li>
-                        <li title="Film 2">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 2">
+                        <li class="item" title="Film 2">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 2">
+                            </a>
                         </li>
-                        <li title="Film 3">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 3">
+                        <li class="item" title="Film 3">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 3">
+                            </a>
                         </li>
-                        <li title="Film 4">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 4">
+                        <li class="item" title="Film 4">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 4">
+                            </a>
                         </li>
-                        <li title="Film 5">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 5">
+                        <li class="item" title="Film 5">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 5">
+                            </a>
                         </li>
-                        <li title="Film 6">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 6">
+                        <li class="item" title="Film 6">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 6">
+                            </a>
                         </li>
-                        <li title="Film 7">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 7">
+                        <li class="item" title="Film 7">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 7">
+                            </a>
                         </li>
                     </ul>
                     <button class="scroll-right-button">
@@ -66,32 +86,46 @@
                 </div>
             </div>
             <div class="category action">
-                <h3>Action</h3>
+                <h3 id="action">Action</h3>
                 <div class="movies-list">
                     <button class="scroll-left-button">
                         <i class="fa-solid fa-chevron-left"></i>
                     </button>
                     <ul class="carousel">
-                        <li title="Film 1">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 1">
+                        <li class="item" title="Film 1">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 1">
+                            </a>
                         </li>
-                        <li title="Film 2">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 2">
+                        <li class="item" title="Film 2">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 2">
+                            </a>
                         </li>
-                        <li title="Film 3">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 3">
+                        <li class="item" title="Film 3">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 3">
+                            </a>
                         </li>
-                        <li title="Film 4">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 4">
+                        <li class="item" title="Film 4">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 4">
+                            </a>
                         </li>
-                        <li title="Film 5">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 5">
+                        <li class="item" title="Film 5">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 5">
+                            </a>
                         </li>
-                        <li title="Film 6">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 6">
+                        <li class="item" title="Film 6">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 6">
+                            </a>
                         </li>
-                        <li title="Film 7">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 7">
+                        <li class="item" title="Film 7">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 7">
+                            </a>
                         </li>
                     </ul>
                     <button class="scroll-right-button">
@@ -100,32 +134,46 @@
                 </div>
             </div>
             <div class="category adventure">
-                <h3>Aventure</h3>
+                <h3 id="adventure">Aventure</h3>
                 <div class="movies-list">
                     <button class="scroll-left-button">
                         <i class="fa-solid fa-chevron-left"></i>
                     </button>
                     <ul class="carousel">
-                        <li title="Film 1">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 1">
+                        <li class="item" title="Film 1">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 1">
+                            </a>
                         </li>
-                        <li title="Film 2">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 2">
+                        <li class="item" title="Film 2">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 2">
+                            </a>
                         </li>
-                        <li title="Film 3">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 3">
+                        <li class="item" title="Film 3">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 3">
+                            </a>
                         </li>
-                        <li title="Film 4">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 4">
+                        <li class="item" title="Film 4">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 4">
+                            </a>
                         </li>
-                        <li title="Film 5">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 5">
+                        <li class="item" title="Film 5">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 5">
+                            </a>
                         </li>
-                        <li title="Film 6">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 6">
+                        <li class="item" title="Film 6">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 6">
+                            </a>
                         </li>
-                        <li title="Film 7">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 7">
+                        <li class="item" title="Film 7">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 7">
+                            </a>
                         </li>
                     </ul>
                     <button class="scroll-right-button">
@@ -134,32 +182,47 @@
                 </div>
             </div>
             <div class="category comedy">
-                <h3>Comédie</h3>
+                <h3 id="comedy">Comédie</h3>
                 <div class="movies-list">
                     <button class="scroll-left-button">
                         <i class="fa-solid fa-chevron-left"></i>
                     </button>
                     <ul class="carousel">
-                        <li title="Film 1">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 1">
+                        <li class="item" title="Film 1">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 1">
+                            </a>
                         </li>
-                        <li title="Film 2">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 2">
+                        <li class="item" title="Film 2">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 2">
+                            </a>
                         </li>
-                        <li title="Film 3">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 3">
+                        <li class="item" title="Film 3">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 3">
+                            </a>
                         </li>
-                        <li title="Film 4">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 4">
+                        <li class="item" title="Film 4">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 4">
+                            </a>
                         </li>
-                        <li title="Film 5">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 5">
+                        <li class="item" title="Film 5">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 5">
+                            </a>
                         </li>
-                        <li title="Film 6">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 6">
+                        <li class="item" title="Film 6">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 6">
+                            </a>
                         </li>
-                        <li title="Film 7">
-                            <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 7">
+                        <li class="item" title="Film 7">
+                            <a class="btn" href="#modal">
+                                <img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt="Film 7">
+                            </a>
+                            
                         </li>
                     </ul>
                     <button class="scroll-right-button">
@@ -170,9 +233,28 @@
         </section>
     </main>
     <div id="modal" class="modal">
+        <div class="close">
+            <a href="#" class="close-window">
+                <i class="fa-solid fa-xmark"></i>
+            </a>
+        </div>
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <div id="modal-content"></div>
+            <div class="modal-top">
+                <div class="movie-image"><img src="C:\Users\Cleme\OneDrive\Images\zouinw.jpg" alt=""></div>
+            </div>
+            <ul class="movie-details">
+                <li id="movie-title">Titre :</li>
+                <li id="movie-genre">Genre :</li>
+                <li id="movie-release-date">Date de sortie :</li>
+                <li id="movie-rated">Catégorie :</li>
+                <li id="movie-imdb-score">Score IMDB :</li>
+                <li id="movie-director">Réalisisateur :</li>
+                <li id="movie-cast">Casting :</li>
+                <li id="movie-duration">Durée :</li>
+                <li id="movie-country">Pays :</li>
+                <li id="movie-box-office">Box-office :</li>
+                <li id="movie-summary">Résumé :</li>
+            </ul>
         </div>
     </div>
 </body>
