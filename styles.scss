@@ -11,6 +11,9 @@
     padding-right: 2vw;
 }
 
+$theme-color: #62757f;
+$lighter-theme-color:#405865;
+
 body{
     @include flex-container(column, center);
     font-family: "system-ui", sans-serif;
@@ -24,7 +27,7 @@ header {
     @include flex-container(row, center, space-between);
     width: 96%;
     flex-shrink: 0;
-    background-color: gray;
+    background-color: $theme-color;
     color: white;
     
     h1 {
@@ -55,7 +58,7 @@ header {
             transition: opacity 0.5s ease;
             display: flex;
             flex-direction: column;
-            background-color: gray;
+            background-color: #62757f;
             position: absolute;
             margin-top: 0vw;
             pointer-events: none;
@@ -65,7 +68,7 @@ header {
                 font-size: 2vw;
                 padding-left: 0.2vw;
                 &:nth-child(odd){
-                    background-color: rgb(151, 151, 151);
+                    background-color: $lighter-theme-color;
                 }
                 &:first-child{
                     padding-bottom: 1%;
@@ -103,11 +106,11 @@ main {
             margin-right: 1vw;
             h2{
                 font-size: 3vw;
-                margin-bottom: 0vw;
+                margin-bottom: 1vw;
                 text-align: center;
             }
             .play-button{
-                align-items: center;
+                align-items: flex-start;
                 justify-content: center;
                 display: flex;
                 width: 12vw;
@@ -117,8 +120,8 @@ main {
                 font-weight: 500;
                 text-align: center;
                 color: white;
-                height: 5vw;
-                background-color: #ff2c00;
+                height: 4vw;
+                background-color: #fc4641;
                 border: none;
                 border-radius: 5vw;
                 cursor: pointer;
@@ -137,9 +140,7 @@ main {
                 flex-wrap: wrap;
                 overflow-y: scroll;
                 font-size: 1.6vw;
-                margin-top: 0vw;
-                margin-bottom: 1vw;
-                margin-right: 1vw;
+                margin: 1vw 1vw 1vw 0vw;
                 font-weight: bolder;
 
             }
@@ -165,7 +166,7 @@ main {
             .movies-list {
                 @include flex-container(row, center, space-evenly);
                 white-space: nowrap;
-                width: 98vw;
+                width: 92vw;
                 button {
                     background-color: transparent;
                     border: none;
@@ -174,27 +175,29 @@ main {
                     padding: 0%;
                 }
                 .carousel {
-                    @include flex-container(row);
+                    @include flex-container(row);  
+                    overflow: hidden;
                     list-style: none;
                     padding: 0%;
                     margin: 0% 1% 0% 1%;
-                    overflow: hidden;
                     scroll-behavior: smooth;
                     width: 100%;
                     .item {
-                        padding: 0% 1% 0% 1%;
-                        margin: 0% 1% 0% 1%;
-                        min-width: 21.5vw;
-                        height: 20vw;
-                        overflow: hidden;
+                        margin: 0vw 1.9vw 0vw 0vw;;
+                        border: solid 0.3vw black;
                         box-sizing: border-box;
-                        border: 0.3vw solid black;
+                        max-height: 29.2vw;
                         img {
-                            width: 100%;
+                            width: max-content;
                             overflow:hidden;
-                            margin: 0% 1% 0% 1%;
+                            width: 19.5vw;
                         }
-
+                        &:first-child {
+                            margin-left: 0.9vw;
+                        }
+                        &:last-child {
+                            margin-right: 0.9vw;
+                        }
                     }
                 }
             }
@@ -211,7 +214,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgb(255 255 255 / 80%);;
+    background: rgba(255, 255, 255, 0.904);
     z-index: 998;
     visibility: hidden;
     opacity: 0;
@@ -235,8 +238,8 @@ main {
             padding-right: 2vw;
             color: rgb(0, 0, 0);
             position: relative;
-            bottom: 27vw;
-            right: -13vw;
+            bottom: 23vw;
+            right: -11vw;
         }
     }
     .modal-content{
@@ -244,9 +247,9 @@ main {
         position: fixed;
         flex-direction: column;
         display: flex;
-        width: 25vw;
+        width: 21vw;
         box-shadow: 0vw 0vw 0.5vw 0vw #b5b5b5;
-        background: linear-gradient(to bottom, #979797, #FFFFFF);
+        background: $theme-color;
         overflow: hidden;
         border-radius: 1vw;
         .modal-top {
@@ -270,14 +273,41 @@ main {
             font-weight: 500;
             overflow-wrap: anywhere;
             align-items: flex-start;
-            margin: 1vw;
+            margin: 0vw;
             flex-direction: column;
             color: rgb(0, 0, 0);
             font-size: 1.5vw;
             overflow-y: scroll;
             padding-left: 0;
+            max-height: 21.2vw;
             &::-webkit-scrollbar{
                 display: none;
+            }
+            li{
+                color: white;
+                padding: 0.3vw;
+                padding-bottom: 0.3vw;
+                padding-left: 0.5vw;
+                &:nth-child(odd) {
+                    background-color: $lighter-theme-color;
+                    width: 100%;
+                }
+
+                }
+            p{
+                margin: 0vw;
+                padding: 0vw;
+                color: white;
+                padding-left: 0.5vw;
+                padding-bottom: 0.5vw;
+                padding-top: 0.5vw;
+                border-bottom: solid 0.2vw white;
+                &:nth-child(odd){
+                background-color: $lighter-theme-color;
+                }
+                &:last-child{
+                    border-bottom: none;
+                }
             }
         }
     }
