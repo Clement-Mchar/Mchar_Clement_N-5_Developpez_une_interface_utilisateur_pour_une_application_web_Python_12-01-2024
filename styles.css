@@ -206,10 +206,15 @@ main .categories .category .movies-list .carousel .item {
   box-sizing: border-box;
   max-height: 29.2vw;
 }
+main .categories .category .movies-list .carousel .item a {
+  width: 100%;
+  display: block;
+}
 main .categories .category .movies-list .carousel .item img {
   width: max-content;
   overflow: hidden;
   width: 19.5vw;
+  height: 28.7vw;
 }
 main .categories .category .movies-list .carousel .item:first-child {
   margin-left: 0.9vw;
