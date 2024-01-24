@@ -214,7 +214,6 @@ main .categories .category .movies-list .carousel .item img {
   width: max-content;
   overflow: hidden;
   width: 19.5vw;
-  height: 28.7vw;
 }
 main .categories .category .movies-list .carousel .item:first-child {
   margin-left: 0.9vw;
@@ -275,7 +274,7 @@ main .categories .category .movies-list .carousel .item:last-child {
 .modal .modal-content .modal-top {
   display: flex;
   flex-direction: row-reverse;
-  padding: 0em;
+  padding: 0vw;
 }
 .modal .modal-content .modal-top .movie-image {
   display: flex;
@@ -285,7 +284,8 @@ main .categories .category .movies-list .carousel .item:last-child {
 }
 .modal .modal-content .modal-top .movie-image img {
   width: 100%;
-  padding-bottom: 0px;
+  padding-bottom: 0vw;
+  max-height: 28vw;
 }
 .modal .modal-content .movie-details {
   list-style: none;
@@ -322,6 +322,7 @@ main .categories .category .movies-list .carousel .item:last-child {
   padding-bottom: 0.5vw;
   padding-top: 0.5vw;
   border-bottom: solid 0.2vw white;
+  width: 100%;
 }
 .modal .modal-content .movie-details p:nth-child(odd) {
   background-color: #405865;

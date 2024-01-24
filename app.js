@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
+    window.location.href='#'
     function fetchFeaturedMoviePreview() {
         const sortedMoviesUrl = "http://localhost:8000/api/v1/titles/?year=&min_year=&max_year=&imdb_score=&imdb_score_min=&imdb_score_max=&title=&title_contains=&genre=&genre_contains=&sort_by=-imdb_score&director=&director_contains=&writer=&writer_contains=&actor=&actor_contains=&country=&country_contains=&lang=&lang_contains=&company=&company_contains=&rating=&rating_contains=";
 
@@ -59,45 +59,45 @@ document.addEventListener('DOMContentLoaded', function() {
         try {
             const response = await fetch(apiUrl);
             const data = await response.json();
-            
+
             const carousel = document.querySelector(carouselSelector);
             const items = carousel.querySelectorAll('.item');
-    
+
             for (let i = 0; totalAdded < 7 && i < data.results.length; i++) {
                 const movie = data.results[i];
                 const item = items[totalAdded];
                 const movieId = movie.id;
                 const imageUrl = movie.image_url;
                 const imageExists = await doesImageExist(imageUrl);
-    
+
                 const anchor = item.querySelector('.btn');
                 const img = anchor.querySelector('img');
-    
+
                 item.title = `Film ${movieId}`;
                 item.dataset.id = movieId;
                 anchor.href = `#modal-${movieId}`;
                 img.src = imageExists ? imageUrl : 'C:\\Users\\Cleme\\OneDrive\\Images\\zouinw.jpg';
                 img.alt = `Film ${movieId}`;
-    
+
                 totalAdded++;
             }
-    
+
             if (totalAdded < 7 && data.next) {
                 await fetchAndInsertImages(data.next, carouselSelector, totalAdded);
             }
-    
+
         } catch (error) {
             console.error('Erreur lors de la récupération des images :', error);
         }
     }
-    
-    
+
+
 
     fetchAndInsertImages("http://localhost:8000/api/v1/titles/?year=&min_year=&max_year=&imdb_score=&imdb_score_min=&imdb_score_max=&title=&title_contains=&genre=&genre_contains=&sort_by=-imdb_score&director=&director_contains=&writer=&writer_contains=&actor=&actor_contains=&country=&country_contains=&lang=&lang_contains=&company=&company_contains=&rating=&rating_contains=", '.category.best-rated .carousel');
     fetchAndInsertImages("http://localhost:8000/api/v1/titles/?year=&min_year=&max_year=&imdb_score=&imdb_score_min=&imdb_score_max=&title=&title_contains=&genre=Action&genre_contains=&sort_by=-imdb_score&director=&director_contains=&writer=&writer_contains=&actor=&actor_contains=&country=&country_contains=&lang=&lang_contains=&company=&company_contains=&rating=&rating_contains=", '.category.action .carousel');
     fetchAndInsertImages("http://localhost:8000/api/v1/titles/?year=&min_year=&max_year=&imdb_score=&imdb_score_min=&imdb_score_max=&title=&title_contains=&genre=Adventure&genre_contains=&sort_by=-imdb_score&director=&director_contains=&writer=&writer_contains=&actor=&actor_contains=&country=&country_contains=&lang=&lang_contains=&company=&company_contains=&rating=&rating_contains=", '.category.adventure .carousel', 0);
     fetchAndInsertImages("http://localhost:8000/api/v1/titles/?year=&min_year=&max_year=&imdb_score=&imdb_score_min=&imdb_score_max=&title=&title_contains=&genre=Comedy&genre_contains=&sort_by=-imdb_score&director=&director_contains=&writer=&writer_contains=&actor=&actor_contains=&country=&country_contains=&lang=&lang_contains=&company=&company_contains=&rating=&rating_contains=", '.category.comedy .carousel');
-    
+
     async function doesImageExist(url) {
         try {
             const response = await fetch(url, { method: 'HEAD' });
@@ -106,6 +106,30 @@ document.addEventListener('DOMContentLoaded', function() {
             return false;
         }
     }
-
+    function openModal() {
+        let items = document.querySelectorAll('.carousel .item');
+        const modal = document.querySelector('#modal')
     
+        for (const item of items) {
+            item.addEventListener('click', () => {
+                let itemId = item.getAttribute('data-id')
+    
+                
+                modal.setAttribute('id', `modal-${itemId}`)
+                modal.dataset.id = itemId;
+            });
+        };
+        
+    }
+
+    openModal()
+
+    function closeModal(){
+        let modal = document.querySelector('.modal')
+        const closeButton = modal.querySelector('.close a i')
+        closeButton.addEventListener('click', () => {
+            modal.setAttribute('id', "modal")
+        })
+    }
+    closeModal()
 });

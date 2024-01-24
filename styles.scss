@@ -195,7 +195,6 @@ main {
                             width: max-content;
                             overflow:hidden;
                             width: 19.5vw;
-                            height: 28.7vw;
                         }
                         &:first-child {
                             margin-left: 0.9vw;
@@ -260,7 +259,7 @@ main {
         .modal-top {
             display: flex;
             flex-direction: row-reverse;
-            padding: 0em;
+            padding: 0vw;
             .movie-image {
                 display: flex;
                 align-self: flex-start;
@@ -268,7 +267,8 @@ main {
                 justify-content: flex-start;
                 img {
                     width: 100%;
-                    padding-bottom: 0px;
+                    padding-bottom: 0vw;
+                    max-height: 28vw;
                 }
             }
         }
@@ -307,6 +307,7 @@ main {
                 padding-bottom: 0.5vw;
                 padding-top: 0.5vw;
                 border-bottom: solid 0.2vw white;
+                width: 100%;
                 &:nth-child(odd){
                 background-color: $lighter-theme-color;
                 }
