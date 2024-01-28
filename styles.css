@@ -26,7 +26,7 @@ header h1 {
 header nav {
   display: flex;
   flex-direction: row;
-  align-items: space-between;
+  align-items: center;
   justify-content: space-between;
   padding: 0px;
   list-style: none;
@@ -141,7 +141,6 @@ main .featured-movie .featured-movie-layout .summary {
   text-align-last: center;
   display: flex;
   text-align: center;
-  text-wrap: balance;
   flex-wrap: wrap;
   overflow-y: scroll;
   font-size: 1.6vw;
@@ -304,17 +303,17 @@ main .categories .category .movies-list .carousel .item:last-child {
 .modal .modal-content .movie-details::-webkit-scrollbar {
   display: none;
 }
-.modal .modal-content .movie-details li {
+.modal .modal-content .movie-details li:nth-child(odd) {
   color: white;
   padding: 0.3vw;
   padding-bottom: 0.3vw;
   padding-left: 0.5vw;
 }
-.modal .modal-content .movie-details li:nth-child(odd) {
+.modal .modal-content .movie-details li:nth-child(odd):nth-child(odd) {
   background-color: #405865;
   width: 100%;
 }
-.modal .modal-content .movie-details p {
+.modal .modal-content .movie-details li:nth-child(even) {
   margin: 0vw;
   padding: 0vw;
   color: white;
@@ -324,10 +323,10 @@ main .categories .category .movies-list .carousel .item:last-child {
   border-bottom: solid 0.2vw white;
   width: 100%;
 }
-.modal .modal-content .movie-details p:nth-child(odd) {
+.modal .modal-content .movie-details li:nth-child(even):nth-child(odd) {
   background-color: #405865;
 }
-.modal .modal-content .movie-details p:last-child {
+.modal .modal-content .movie-details li:nth-child(even):last-child {
   border-bottom: none;
 }
 
