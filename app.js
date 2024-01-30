@@ -73,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const item = items[totalAdded];
                 const movieId = movie.id;
                 const imageUrl = movie.image_url;
+                const movieTitle = movie.title;
                 const imageExists = await doesImageExist(imageUrl);
 
                 const anchor = item.querySelector('.btn');
@@ -82,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 item.dataset.id = movieId;
                 anchor.href = `#modal-${movieId}`;
                 img.src = imageExists ? imageUrl : 'https://canarddebain.com/cdn/shop/products/CanardXLJaune01_8bf06f7f-2f3e-4774-bd1b-96c93fadf0fa.jpg?v=1702586104&';
-                img.alt = `Film ${movieId}`;
+                img.alt = `${movieTitle}`;
 
                 totalAdded++;
             }
