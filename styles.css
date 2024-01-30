@@ -208,6 +208,7 @@ main .categories .category .movies-list .carousel .item {
 main .categories .category .movies-list .carousel .item a {
   width: 100%;
   display: block;
+  min-height: 30vw;
 }
 main .categories .category .movies-list .carousel .item img {
   width: max-content;
