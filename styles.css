@@ -256,40 +256,46 @@ main .categories .category .movies-list .carousel .item:last-child {
   padding-right: 2vw;
   color: rgb(0, 0, 0);
   position: relative;
-  bottom: 23vw;
-  right: -11vw;
+  bottom: 0vw;
+  z-index: 1;
+  right: -44vw;
 }
 .modal .modal-content {
   margin: 1em;
   position: fixed;
   flex-direction: column;
   display: flex;
-  width: 21vw;
-  box-shadow: 0vw 0vw 0.5vw 0vw #b5b5b5;
-  background: #62757f;
+  background: transparent;
   overflow: hidden;
+  max-width: 80%;
+  width: 80%;
   border-radius: 1vw;
+  box-shadow: 0em 0em 1vw 0px gray;
 }
 .modal .modal-content .modal-top {
   display: flex;
-  flex-direction: row-reverse;
+  align-self: center;
+  width: 100%;
+  justify-content: center;
+  background-color: white;
   padding: 0vw;
 }
 .modal .modal-content .modal-top .movie-image {
   display: flex;
   align-self: flex-start;
-  width: 100%;
   justify-content: flex-start;
 }
 .modal .modal-content .modal-top .movie-image img {
-  width: 100%;
   padding-bottom: 0vw;
   max-height: 28vw;
+  min-height: auto;
+  min-width: 17vw;
 }
 .modal .modal-content .movie-details {
   list-style: none;
   display: flex;
   font-weight: 500;
+  background-color: #62757f;
   overflow-wrap: anywhere;
   align-items: flex-start;
   margin: 0vw;
