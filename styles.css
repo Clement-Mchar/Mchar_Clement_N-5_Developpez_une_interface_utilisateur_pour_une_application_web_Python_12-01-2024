@@ -170,7 +170,7 @@ main .categories .category {
 main .categories .category h3 {
   font-size: 2vw;
   font-weight: 500;
-  margin-bottom: 5vw;
+  margin-bottom: 3vw;
 }
 main .categories .category .movies-list {
   display: flex;
