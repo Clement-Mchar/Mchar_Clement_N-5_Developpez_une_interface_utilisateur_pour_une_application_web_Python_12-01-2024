@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 item.title = `Film ${movieId}`;
                 item.dataset.id = movieId;
                 anchor.href = `#modal-${movieId}`;
-                img.src = imageExists ? imageUrl : 'C:\\Users\\Cleme\\OneDrive\\Images\\zouinw.jpg';
+                img.src = imageExists ? imageUrl : 'https://canarddebain.com/cdn/shop/products/CanardXLJaune01_8bf06f7f-2f3e-4774-bd1b-96c93fadf0fa.jpg?v=1702586104&';
                 img.alt = `Film ${movieId}`;
 
                 totalAdded++;
