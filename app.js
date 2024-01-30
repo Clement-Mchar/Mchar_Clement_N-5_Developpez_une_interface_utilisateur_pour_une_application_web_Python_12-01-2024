@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 item.title = `Film ${movieId}`;
                 item.dataset.id = movieId;
                 anchor.href = `#modal-${movieId}`;
-                img.src = imageExists ? imageUrl : 'https://e7.pngegg.com/pngimages/106/223/png-clipart-caution-signage-exclamation-mark-warning-sign-interjection-warning-sign-miscellaneous-angle.png';
+                img.src = imageExists ? imageUrl : 'https://media.istockphoto.com/id/1221750570/vector/exclamation-mark-sign-warning-about-an-emergency.jpg?s=612x612&w=0&k=20&c=EsKL2jyoS_T06mQuX6_mbhPF6qqkrO48v9L9YsOe-Eo=';
                 img.alt = `${movieTitle}`;
 
                 totalAdded++;
